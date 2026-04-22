@@ -26,82 +26,23 @@
     padding: 12px;
     padding-bottom: 80px;
   }
-  .card {
-    background: var(--bg2);
-    border-radius: 14px;
-    padding: 16px;
-    margin-bottom: 12px;
-    border: 1px solid var(--border);
-  }
-  .card-title {
-    font-size: 0.78rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--accent);
-    margin-bottom: 12px;
-  }
-  input, select, textarea {
-    width: 100%;
-    padding: 11px 13px;
-    background: var(--bg);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    color: var(--text);
-    font-size: 0.92rem;
-    outline: none;
-    font-family: inherit;
-    transition: border 0.2s;
-  }
+  .card { background: var(--bg2); border-radius: 14px; padding: 16px; margin-bottom: 12px; border: 1px solid var(--border); }
+  .card-title { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 12px; }
+  input, select, textarea { width: 100%; padding: 11px 13px; background: var(--bg); border: 1px solid var(--border); border-radius: 10px; color: var(--text); font-size: 0.92rem; outline: none; font-family: inherit; transition: border 0.2s; }
   input:focus, select:focus, textarea:focus { border-color: var(--accent); }
   select option { background: #1a2634; }
   textarea { resize: vertical; min-height: 110px; line-height: 1.6; }
-  .field-label {
-    font-size: 0.78rem;
-    color: var(--hint);
-    margin-bottom: 5px;
-    margin-top: 11px;
-  }
+  .field-label { font-size: 0.78rem; color: var(--hint); margin-bottom: 5px; margin-top: 11px; }
   .field-label:first-child { margin-top: 0; }
 
-  /* TABS */
-  .tabs {
-    display: flex;
-    gap: 3px;
-    background: var(--bg2);
-    border-radius: 12px;
-    padding: 4px;
-    margin-bottom: 14px;
-  }
-  .tab {
-    flex: 1;
-    padding: 9px 4px;
-    border: none;
-    border-radius: 9px;
-    cursor: pointer;
-    font-size: 0.78rem;
-    font-weight: 600;
-    background: transparent;
-    color: var(--hint);
-    transition: all 0.2s;
-  }
+  .tabs { display: flex; gap: 3px; background: var(--bg2); border-radius: 12px; padding: 4px; margin-bottom: 14px; }
+  .tab { flex: 1; padding: 9px 4px; border: none; border-radius: 9px; cursor: pointer; font-size: 0.75rem; font-weight: 600; background: transparent; color: var(--hint); transition: all 0.2s; }
   .tab.active { background: var(--btn); color: var(--btn-text); }
 
-  /* TOPIC PILLS */
   .topic-grid { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 10px; }
-  .topic-pill {
-    padding: 6px 13px;
-    border-radius: 20px;
-    border: 1px solid var(--border);
-    background: var(--bg);
-    color: var(--hint);
-    font-size: 0.78rem;
-    cursor: pointer;
-    transition: all 0.18s;
-  }
+  .topic-pill { padding: 6px 13px; border-radius: 20px; border: 1px solid var(--border); background: var(--bg); color: var(--hint); font-size: 0.78rem; cursor: pointer; transition: all 0.18s; }
   .topic-pill.active { background: rgba(56,189,248,0.15); border-color: var(--accent); color: var(--accent); }
 
-  /* QUESTION LIST */
   .q-list { max-height: 250px; overflow-y: auto; margin-top: 10px; }
   .q-item { display: flex; align-items: flex-start; gap: 8px; padding: 7px 0; border-bottom: 1px solid var(--border); }
   .q-item:last-child { border-bottom: none; }
@@ -112,40 +53,15 @@
   .q-list::-webkit-scrollbar { width: 4px; }
   .q-list::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
 
-  /* BUTTONS */
-  .main-btn {
-    width: 100%;
-    padding: 14px;
-    background: var(--btn);
-    color: var(--btn-text);
-    border: none;
-    border-radius: 12px;
-    font-size: 1rem;
-    font-weight: 700;
-    cursor: pointer;
-    transition: opacity 0.2s;
-    margin-top: 4px;
-  }
+  .main-btn { width: 100%; padding: 14px; background: var(--btn); color: var(--btn-text); border: none; border-radius: 12px; font-size: 1rem; font-weight: 700; cursor: pointer; transition: opacity 0.2s; margin-top: 4px; }
   .main-btn:disabled { opacity: 0.45; cursor: not-allowed; }
   .ctrl-row { display: flex; gap: 8px; margin-top: 10px; }
-  .ctrl-btn {
-    flex: 1;
-    padding: 10px;
-    border-radius: 10px;
-    font-size: 0.82rem;
-    font-weight: 600;
-    cursor: pointer;
-    border: 1px solid var(--border);
-    background: var(--bg);
-    color: var(--text);
-    display: none;
-  }
+  .ctrl-btn { flex: 1; padding: 10px; border-radius: 10px; font-size: 0.82rem; font-weight: 600; cursor: pointer; border: 1px solid var(--border); background: var(--bg); color: var(--text); display: none; }
   .ctrl-btn.visible { display: block; }
   .ctrl-btn.pause { border-color: #f59e0b; color: #fde68a; background: rgba(245,158,11,0.1); }
   .ctrl-btn.paused { border-color: #10b981; color: #6ee7b7; background: rgba(16,185,129,0.1); }
-  .ctrl-btn.stop  { border-color: #ef4444; color: #fca5a5; background: rgba(239,68,68,0.1); }
+  .ctrl-btn.stop { border-color: #ef4444; color: #fca5a5; background: rgba(239,68,68,0.1); }
 
-  /* PROGRESS */
   .progress-wrap { display: none; margin-top: 12px; }
   .progress-wrap.visible { display: block; }
   .progress-label { font-size: 0.82rem; color: var(--hint); margin-bottom: 6px; }
@@ -156,7 +72,6 @@
   .log-entry.ok { color: #4ade80; }
   .log-entry.err { color: #f87171; }
 
-  /* MISC */
   .row-between { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
   .link-btn { font-size: 0.75rem; color: var(--accent); background: none; border: none; cursor: pointer; padding: 0; }
   .hint-text { font-size: 0.74rem; color: var(--hint); margin-top: 5px; }
@@ -174,8 +89,15 @@
   .token-row input { flex: 1; }
   .mini-btn { padding: 11px 12px; background: var(--bg); border: 1px solid var(--border); border-radius: 10px; color: var(--hint); font-size: 0.8rem; cursor: pointer; white-space: nowrap; }
   .mini-btn:hover { border-color: var(--accent); color: var(--accent); }
-  .saved-badge { font-size: 0.72rem; color: #4ade80; display: none; margin-top: 4px; }
-  .saved-badge.visible { display: block; }
+  .user-item { display: flex; align-items: center; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 0.82rem; }
+  .user-item:last-child { border-bottom: none; }
+  .badge { font-size: 0.68rem; padding: 2px 8px; border-radius: 10px; font-weight: 700; }
+  .badge.owner { background: rgba(56,189,248,0.15); color: var(--accent); }
+  .badge.allowed { background: rgba(16,185,129,0.15); color: #6ee7b7; }
+  .cmd-ref { font-size: 0.78rem; color: var(--hint); line-height: 2; }
+  .cmd-ref code { font-size: 0.75rem; }
+  .q-answer { font-size: 0.75rem; color: #f59e0b; margin-top: 3px; font-style: italic; }
+  .ans-toggle { font-size: 0.7rem; color: var(--accent); background: none; border: none; cursor: pointer; padding: 0; margin-top: 2px; }
 </style>
 </head>
 <body>
@@ -183,7 +105,8 @@
 <div class="tabs">
   <button class="tab active" onclick="switchTab('send')">🚀 Send</button>
   <button class="tab" onclick="switchTab('edit')">✏️ Edit</button>
-  <button class="tab" onclick="switchTab('settings')">⚙️ Settings</button>
+  <button class="tab" onclick="switchTab('users')">👥 Users</button>
+  <button class="tab" onclick="switchTab('cmds')">📋 Commands</button>
 </div>
 
 <!-- ===== SEND TAB ===== -->
@@ -213,13 +136,17 @@
       <input type="checkbox" id="sendHeader" checked/>
       <span>Send topic name as header</span>
     </label>
+    <label class="toggle">
+      <input type="checkbox" id="sendAnswers"/>
+      <span>Send answers alongside questions</span>
+    </label>
   </div>
 
   <button class="main-btn" id="sendBtn" onclick="startSending()">🚀 Send to Telegram</button>
 
   <div class="ctrl-row">
     <button class="ctrl-btn pause" id="pauseBtn" onclick="togglePause()">⏸️ Pause</button>
-    <button class="ctrl-btn stop"  id="stopBtn"  onclick="stopSending()">⛔ Stop</button>
+    <button class="ctrl-btn stop" id="stopBtn" onclick="stopSending()">⛔ Stop</button>
   </div>
 
   <div class="progress-wrap" id="progressWrap">
@@ -237,7 +164,9 @@
     <select id="editTopicSelect"></select>
     <div class="field-label">New Questions — one per line</div>
     <textarea id="newQuestionsInput" placeholder="What is the blood supply of the kidney?&#10;Define renal autoregulation"></textarea>
-    <p class="hint-text">💡 Each line = one Telegram message</p>
+    <div class="field-label">Answers (optional) — one per line, matching order</div>
+    <textarea id="newAnswersInput" placeholder="Renal artery (branch of aorta)&#10;Ability of kidney to maintain constant GFR" style="min-height:80px"></textarea>
+    <p class="hint-text">💡 Leave answer blank for a question if none. Answers are hidden — revealed via /answer command.</p>
     <button class="main-btn" style="margin-top:12px" onclick="addQuestionsToTopic()">➕ Add Questions</button>
   </div>
 
@@ -247,55 +176,108 @@
     <input type="text" id="newTopicName" placeholder="e.g. 🧬 Genetics"/>
     <div class="field-label">Questions — one per line</div>
     <textarea id="newTopicQuestions" placeholder="What is a mutation?&#10;Differentiate missense from nonsense mutations"></textarea>
+    <div class="field-label">Answers (optional) — one per line, matching order</div>
+    <textarea id="newTopicAnswers" placeholder="A change in DNA sequence&#10;Missense changes amino acid; nonsense creates stop codon" style="min-height:80px"></textarea>
     <button class="main-btn" style="margin-top:12px" onclick="createNewTopic()">✅ Create Topic</button>
   </div>
 
   <div class="card">
-    <div class="card-title">Delete Questions</div>
+    <div class="card-title">Manage Questions</div>
     <select id="manageTopicSelect" onchange="renderManageList()"></select>
     <div class="q-list" id="manageQList"></div>
     <button class="main-btn" style="margin-top:12px;background:#7f1d1d;border:1px solid #dc2626;color:#fca5a5" onclick="deleteCurrentTopic()">🗑️ Delete Entire Topic</button>
   </div>
 </div>
 
-<!-- ===== SETTINGS TAB ===== -->
-<div id="tab-settings" style="display:none">
+<!-- ===== USERS TAB ===== -->
+<div id="tab-users" style="display:none">
   <div class="card">
-    <div class="card-title">Bot Credentials</div>
-    <div class="field-label">Bot Token</div>
+    <div class="card-title">Allowed Users</div>
+    <p class="hint-text" style="margin-bottom:12px">These users can use bot commands in any chat. Add them by Telegram user ID.</p>
+    <div id="userList"></div>
+    <div class="field-label" style="margin-top:14px">Add User by Telegram ID</div>
     <div class="token-row">
-      <input type="password" id="token" placeholder="7412345678:AAFxxxxxxxxxx"/>
-      <button class="mini-btn" onclick="toggleTokenVisibility()">👁️</button>
+      <input type="text" id="newUserId" placeholder="e.g. 123456789"/>
+      <input type="text" id="newUserName" placeholder="Name/label" style="margin-left:6px"/>
     </div>
-    <div class="field-label">Group Chat ID</div>
-    <input type="text" id="chatId" placeholder="-1001234567890"/>
-    <button class="main-btn" style="margin-top:14px" onclick="saveCredentials()">💾 Save Credentials</button>
-    <p class="saved-badge" id="savedBadge">✅ Saved to this device</p>
+    <button class="main-btn" style="margin-top:10px" onclick="addAllowedUser()">➕ Allow User</button>
   </div>
-
   <div class="card">
-    <div class="card-title">How to Get Your Credentials</div>
+    <div class="card-title">How to find a User ID</div>
     <div class="step">
-      <b>Bot Token:</b><br>
-      Telegram → <code>@BotFather</code> → <code>/mybots</code> → your bot → API Token<br><br>
-      <b>Chat ID:</b><br>
-      Add <code>@userinfobot</code> to your group → it replies with the ID (starts with <code>-</code>)<br><br>
-      <b>Make it a Mini App:</b><br>
-      <code>@BotFather</code> → <code>/mybots</code> → your bot → Bot Settings → Menu Button → set URL to where this file is hosted
+      Ask the user to send any message to <code>@userinfobot</code> — it replies with their numeric ID.
     </div>
   </div>
 </div>
 
+<!-- ===== COMMANDS TAB ===== -->
+<div id="tab-cmds" style="display:none">
+  <div class="card">
+    <div class="card-title">Chat Commands Reference</div>
+    <p class="hint-text" style="margin-bottom:10px">Send these commands to any chat where the bot is added. Only you and allowed users can use them.</p>
+    <div class="cmd-ref">
+      <b style="color:var(--text)">Sending</b><br>
+      <code>/send &lt;topic&gt;</code> — send all questions in a topic<br>
+      <code>/sendq &lt;topic&gt; &lt;number&gt;</code> — send one specific question<br>
+      <code>/sendall</code> — send all topics<br>
+      <code>/answer &lt;topic&gt; &lt;number&gt;</code> — send answer to the group<br>
+      <code>/answerprivate &lt;topic&gt; &lt;number&gt;</code> — send answer privately to you<br><br>
+
+      <b style="color:var(--text)">Topics & Questions</b><br>
+      <code>/topics</code> — list all topics<br>
+      <code>/list &lt;topic&gt;</code> — list all questions in a topic<br>
+      <code>/addtopic &lt;name&gt;</code> — create a new topic<br>
+      <code>/addq &lt;topic&gt; | &lt;question&gt; | &lt;answer&gt;</code> — add a question (answer optional)<br>
+      <code>/delq &lt;topic&gt; &lt;number&gt;</code> — delete a question<br>
+      <code>/deltopic &lt;topic&gt;</code> — delete a topic<br><br>
+
+      <b style="color:var(--text)">Users</b><br>
+      <code>/allow &lt;user_id&gt;</code> — allow a user to use commands<br>
+      <code>/disallow &lt;user_id&gt;</code> — remove a user's access<br>
+      <code>/users</code> — list allowed users<br><br>
+
+      <b style="color:var(--text)">Other</b><br>
+      <code>/stop</code> — stop current sending session<br>
+      <code>/help</code> — show command list in chat<br>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">⚠️ Setup Required</div>
+    <div class="step">
+      For commands to work in chat, you need to run the <b>polling bot script</b> on a server or your PC.<br><br>
+      <b>Option A — Run locally (PC stays on):</b><br>
+      1. Install Node.js<br>
+      2. Download <code>bot.js</code> below<br>
+      3. Run: <code>node bot.js</code><br><br>
+      <b>Option B — Free cloud hosting:</b><br>
+      Deploy <code>bot.js</code> to <code>Railway.app</code> or <code>Render.com</code> (free tier)<br>
+    </div>
+    <button class="main-btn" style="margin-top:12px" onclick="downloadBotScript()">⬇️ Download bot.js</button>
+  </div>
+</div>
+
 <script>
-// ---- Telegram Web App Init ----
+// ============================================================
+// ⚙️  CONFIGURATION — EDIT THESE
+// ============================================================
+const BOT_TOKEN  = "YOUR_BOT_TOKEN_HERE";       // e.g. "7412345678:AAFxxx..."
+const CHAT_ID    = "YOUR_CHAT_ID_HERE";          // e.g. "-1001234567890"
+const OWNER_ID   = "YOUR_TELEGRAM_USER_ID_HERE"; // your numeric user ID
+// ============================================================
+
 const tg = window.Telegram && window.Telegram.WebApp;
-if (tg) {
-  tg.ready();
-  tg.expand();
+if (tg) { tg.ready(); tg.expand(); }
+
+// ---- ALLOWED USERS (persisted in localStorage) ----
+function loadAllowedUsers() {
+  try { return JSON.parse(localStorage.getItem("allowed_users") || "[]"); } catch { return []; }
 }
+function saveAllowedUsers(arr) { localStorage.setItem("allowed_users", JSON.stringify(arr)); }
+let allowedUsers = loadAllowedUsers();
 
 // ---- DATA ----
-const TOPICS = [
+let TOPICS = [
   {
     id: "spirochetes", label: "🦠 Spirochetes",
     questions: [
@@ -321,7 +303,8 @@ const TOPICS = [
       "What are the two phases of leptospirosis and their features?",
       "What are the organ systems affected in severe leptospirosis?",
       "What is the treatment and chemoprophylaxis for leptospirosis?"
-    ]
+    ],
+    answers: []
   },
   {
     id: "renal", label: "🧪 Renal Function Tests",
@@ -351,7 +334,8 @@ const TOPICS = [
       "What hormones are synthesized and activated by the kidney?",
       "What is the significance of the serum urea nitrogen to creatinine ratio, and when is it elevated beyond 20:1?",
       "What is Tamm-Horsfall mucoprotein and where is it produced?"
-    ]
+    ],
+    answers: []
   },
   {
     id: "ophthalmic", label: "👁️ Ophthalmic Pathology",
@@ -386,7 +370,8 @@ const TOPICS = [
       "Describe the gross and microscopic features of retinoblastoma (include Flexner-Wintersteiner rosettes)",
       "What are the clinical presentations of retinoblastoma?",
       "What is the genetics of retinoblastoma?"
-    ]
+    ],
+    answers: []
   },
   {
     id: "all_leukaemia", label: "🔬 ALL",
@@ -410,7 +395,8 @@ const TOPICS = [
       "What is Tumour Lysis Syndrome and in which ALL patients is it highest risk?",
       "What is the treatment for relapsed ALL?",
       "List poor prognostic factors in ALL"
-    ]
+    ],
+    answers: []
   },
   {
     id: "cll", label: "🩸 CLL",
@@ -435,46 +421,30 @@ const TOPICS = [
       "What is the 'watch and wait' policy in CLL?",
       "What are the autoimmune complications seen in CLL?",
       "What is the only known curative treatment for CLL and why is it rarely used?"
-    ]
+    ],
+    answers: []
   }
 ];
 
+// load any saved topics/answers from localStorage
+(function() {
+  const saved = localStorage.getItem("topics_data");
+  if (saved) { try { TOPICS = JSON.parse(saved); } catch {} }
+})();
+
+function persistTopics() { localStorage.setItem("topics_data", JSON.stringify(TOPICS)); }
+
 let activeTopics = new Set(TOPICS.map(t => t.id));
-let stopFlag = false;
-let pauseFlag = false;
-
-// ---- Load saved credentials ----
-window.addEventListener("load", () => {
-  const t = localStorage.getItem("tg_token");
-  const c = localStorage.getItem("tg_chatid");
-  if (t) document.getElementById("token").value = t;
-  if (c) document.getElementById("chatId").value = c;
-});
-
-function saveCredentials() {
-  const t = document.getElementById("token").value.trim();
-  const c = document.getElementById("chatId").value.trim();
-  if (!t || !c) { alert("Please enter both Token and Chat ID."); return; }
-  localStorage.setItem("tg_token", t);
-  localStorage.setItem("tg_chatid", c);
-  const badge = document.getElementById("savedBadge");
-  badge.classList.add("visible");
-  setTimeout(() => badge.classList.remove("visible"), 3000);
-  if (tg) tg.showPopup({ message: "✅ Credentials saved to this device!", buttons: [{ type: "ok" }] });
-}
-
-function toggleTokenVisibility() {
-  const inp = document.getElementById("token");
-  inp.type = inp.type === "password" ? "text" : "password";
-}
+let stopFlag = false, pauseFlag = false;
 
 // ---- TAB ----
 function switchTab(name) {
-  ["send","edit","settings"].forEach((t, i) => {
+  ["send","edit","users","cmds"].forEach((t, i) => {
     document.getElementById("tab-"+t).style.display = t === name ? "block" : "none";
     document.querySelectorAll(".tab")[i].classList.toggle("active", t === name);
   });
   if (name === "edit") { populateEditSelects(); renderManageList(); }
+  if (name === "users") renderUserList();
 }
 
 // ---- TOPIC GRID ----
@@ -501,11 +471,14 @@ function renderPreview() {
   let total = 0;
   TOPICS.forEach(t => {
     if (!activeTopics.has(t.id)) return;
-    t.questions.forEach(q => {
+    t.questions.forEach((q, i) => {
       total++;
+      const ans = (t.answers && t.answers[i]) ? t.answers[i] : null;
       const div = document.createElement("div");
       div.className = "q-item";
-      div.innerHTML = `<span class="q-num">${total}.</span><span class="q-text">${q}</span>`;
+      div.style.flexDirection = "column";
+      div.innerHTML = `<div style="display:flex;gap:8px;align-items:flex-start"><span class="q-num">${total}.</span><span class="q-text">${q}</span></div>`
+        + (ans ? `<div style="padding-left:28px"><button class="ans-toggle" onclick="this.nextSibling.style.display=this.nextSibling.style.display==='none'?'block':'none';this.textContent=this.textContent==='👁 Show answer'?'🙈 Hide answer':'👁 Show answer'">👁 Show answer</button><div class="q-answer" style="display:none">${ans}</div></div>` : "");
       list.appendChild(div);
     });
   });
@@ -538,30 +511,40 @@ function populateEditSelects() {
 function addQuestionsToTopic() {
   const id = document.getElementById("editTopicSelect").value;
   const raw = document.getElementById("newQuestionsInput").value.trim();
+  const rawAns = document.getElementById("newAnswersInput").value;
   if (!raw) { alert("Please type at least one question."); return; }
   const lines = raw.split("\n").map(l => l.trim()).filter(l => l);
+  const ansLines = rawAns.split("\n").map(l => l.trim());
   const topic = TOPICS.find(t => t.id === id);
-  lines.forEach(q => topic.questions.push(q));
+  if (!topic.answers) topic.answers = [];
+  lines.forEach((q, i) => {
+    topic.questions.push(q);
+    topic.answers.push(ansLines[i] || "");
+  });
   document.getElementById("newQuestionsInput").value = "";
+  document.getElementById("newAnswersInput").value = "";
+  persistTopics();
   populateEditSelects(); renderManageList(); renderTopics();
-  const msg = `✅ Added ${lines.length} question${lines.length > 1 ? "s" : ""} to ${topic.label}`;
-  tg ? tg.showPopup({ message: msg, buttons: [{ type: "ok" }] }) : alert(msg);
+  alert(`✅ Added ${lines.length} question(s) to ${topic.label}`);
 }
 
 function createNewTopic() {
   const name = document.getElementById("newTopicName").value.trim();
   const raw  = document.getElementById("newTopicQuestions").value.trim();
+  const rawAns = document.getElementById("newTopicAnswers").value;
   if (!name) { alert("Please enter a topic name."); return; }
   if (!raw)  { alert("Please add at least one question."); return; }
   const lines = raw.split("\n").map(l => l.trim()).filter(l => l);
+  const ansLines = rawAns.split("\n").map(l => l.trim());
   const id = "custom_" + Date.now();
-  TOPICS.push({ id, label: name, questions: lines });
+  TOPICS.push({ id, label: name, questions: lines, answers: ansLines });
   activeTopics.add(id);
   document.getElementById("newTopicName").value = "";
   document.getElementById("newTopicQuestions").value = "";
+  document.getElementById("newTopicAnswers").value = "";
+  persistTopics();
   populateEditSelects(); renderTopics();
-  const msg = `✅ Created "${name}" with ${lines.length} question${lines.length > 1 ? "s" : ""}`;
-  tg ? tg.showPopup({ message: msg, buttons: [{ type: "ok" }] }) : alert(msg);
+  alert(`✅ Created "${name}" with ${lines.length} question(s)`);
 }
 
 function renderManageList() {
@@ -574,15 +557,21 @@ function renderManageList() {
     return;
   }
   topic.questions.forEach((q, i) => {
+    const ans = (topic.answers && topic.answers[i]) ? topic.answers[i] : "";
     const div = document.createElement("div");
     div.className = "q-item";
-    div.innerHTML = `<span class="q-num">${i+1}.</span><span class="q-text">${q}</span><button class="q-del" onclick="deleteQuestion('${id}',${i})">✕</button>`;
+    div.style.flexDirection = "column";
+    div.innerHTML = `<div style="display:flex;gap:8px;align-items:flex-start"><span class="q-num">${i+1}.</span><span class="q-text">${q}</span><button class="q-del" onclick="deleteQuestion('${id}',${i})">✕</button></div>`
+      + (ans ? `<div class="q-answer" style="padding-left:28px">💡 ${ans}</div>` : "");
     list.appendChild(div);
   });
 }
 
 function deleteQuestion(topicId, index) {
-  TOPICS.find(t => t.id === topicId).questions.splice(index, 1);
+  const topic = TOPICS.find(t => t.id === topicId);
+  topic.questions.splice(index, 1);
+  if (topic.answers) topic.answers.splice(index, 1);
+  persistTopics();
   renderManageList(); populateEditSelects(); renderTopics();
 }
 
@@ -590,22 +579,60 @@ function deleteCurrentTopic() {
   const id = document.getElementById("manageTopicSelect").value;
   const topic = TOPICS.find(t => t.id === id);
   if (!topic) return;
-  const doDelete = () => {
+  if (confirm(`Delete "${topic.label}"? This cannot be undone.`)) {
     TOPICS.splice(TOPICS.findIndex(t => t.id === id), 1);
     activeTopics.delete(id);
+    persistTopics();
     populateEditSelects(); renderManageList(); renderTopics();
-  };
-  if (tg) {
-    tg.showPopup({
-      message: `Delete "${topic.label}"? This cannot be undone.`,
-      buttons: [{ id: "yes", type: "destructive", text: "Delete" }, { type: "cancel" }]
-    }, btn => { if (btn === "yes") doDelete(); });
-  } else {
-    if (confirm(`Delete "${topic.label}"?`)) doDelete();
   }
 }
 
+// ---- USERS ----
+function renderUserList() {
+  const list = document.getElementById("userList");
+  list.innerHTML = "";
+  const ownerDiv = document.createElement("div");
+  ownerDiv.className = "user-item";
+  ownerDiv.innerHTML = `<span>You (Owner) <code>${OWNER_ID}</code></span><span class="badge owner">Owner</span>`;
+  list.appendChild(ownerDiv);
+
+  allowedUsers.forEach((u, i) => {
+    const div = document.createElement("div");
+    div.className = "user-item";
+    div.innerHTML = `<span>${u.name || "User"} <code>${u.id}</code></span><button class="mini-btn" style="color:#f87171;border-color:#f87171" onclick="removeUser(${i})">Remove</button>`;
+    list.appendChild(div);
+  });
+
+  if (allowedUsers.length === 0) {
+    const empty = document.createElement("div");
+    empty.style.cssText = "font-size:0.8rem;color:var(--hint);padding:10px 0";
+    empty.textContent = "No additional users allowed yet.";
+    list.appendChild(empty);
+  }
+}
+
+function addAllowedUser() {
+  const id = document.getElementById("newUserId").value.trim();
+  const name = document.getElementById("newUserName").value.trim() || "User";
+  if (!id) { alert("Please enter a user ID."); return; }
+  if (id === OWNER_ID) { alert("That's your own ID — you're already the owner."); return; }
+  if (allowedUsers.find(u => u.id === id)) { alert("User already allowed."); return; }
+  allowedUsers.push({ id, name });
+  saveAllowedUsers(allowedUsers);
+  document.getElementById("newUserId").value = "";
+  document.getElementById("newUserName").value = "";
+  renderUserList();
+}
+
+function removeUser(index) {
+  allowedUsers.splice(index, 1);
+  saveAllowedUsers(allowedUsers);
+  renderUserList();
+}
+
 // ---- SEND ----
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+
 function logEntry(msg, type = "") {
   const log = document.getElementById("log");
   const div = document.createElement("div");
@@ -615,13 +642,11 @@ function logEntry(msg, type = "") {
   log.scrollTop = log.scrollHeight;
 }
 
-const sleep = ms => new Promise(r => setTimeout(r, ms));
-
-async function sendMessage(token, chatId, text) {
-  const res = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+async function sendMessage(text) {
+  const res = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ chat_id: chatId, text })
+    body: JSON.stringify({ chat_id: CHAT_ID, text })
   });
   const data = await res.json();
   if (!data.ok) throw new Error(data.description || "Unknown error");
@@ -630,21 +655,17 @@ async function sendMessage(token, chatId, text) {
 function togglePause() {
   pauseFlag = !pauseFlag;
   const btn = document.getElementById("pauseBtn");
-  btn.textContent  = pauseFlag ? "▶️ Resume" : "⏸️ Pause";
-  btn.className    = "ctrl-btn visible " + (pauseFlag ? "paused" : "pause");
+  btn.textContent = pauseFlag ? "▶️ Resume" : "⏸️ Pause";
+  btn.className = "ctrl-btn visible " + (pauseFlag ? "paused" : "pause");
   document.getElementById("progressLabel").textContent = pauseFlag ? "⏸️ Paused — tap Resume to continue" : "Resuming...";
 }
 
 function stopSending() { stopFlag = true; pauseFlag = false; }
 
 async function startSending() {
-  const token  = document.getElementById("token").value.trim();
-  const chatId = document.getElementById("chatId").value.trim();
-
-  if (!token || !chatId) {
-    const msg = "Please enter your Bot Token and Chat ID in the Settings tab.";
-    tg ? tg.showPopup({ message: msg, buttons: [{ type: "ok" }] }) : alert(msg);
-    switchTab("settings"); return;
+  if (BOT_TOKEN === "YOUR_BOT_TOKEN_HERE" || CHAT_ID === "YOUR_CHAT_ID_HERE") {
+    alert("⚠️ Please open index.html and fill in BOT_TOKEN, CHAT_ID, and OWNER_ID at the top of the script before using.");
+    return;
   }
   if (activeTopics.size === 0) { alert("Please select at least one topic."); return; }
 
@@ -658,15 +679,20 @@ async function startSending() {
 
   const addPrefix  = document.getElementById("addPrefix").checked;
   const sendHeader = document.getElementById("sendHeader").checked;
-  const delay      = Math.max(500, parseInt(document.getElementById("delay").value) || 1200);
+  const sendAnswers = document.getElementById("sendAnswers").checked;
+  const delay = Math.max(500, parseInt(document.getElementById("delay").value) || 1200);
 
   const messages = [];
   TOPICS.forEach(t => {
     if (!activeTopics.has(t.id)) return;
-    if (sendHeader) messages.push({ text: `📌 ${t.label}`, isHeader: true });
-    t.questions.forEach(q => {
-      const prefix = addPrefix ? `Q${messages.filter(m => !m.isHeader).length + 1}. ` : "";
-      messages.push({ text: prefix + q, isHeader: false });
+    if (sendHeader) messages.push(`📌 ${t.label}`);
+    t.questions.forEach((q, i) => {
+      const qNum = messages.filter(m => !m.startsWith("📌")).length + 1;
+      const prefix = addPrefix ? `Q${qNum}. ` : "";
+      const ans = (t.answers && t.answers[i]) ? t.answers[i] : null;
+      let text = prefix + q;
+      if (sendAnswers && ans) text += `\n\n💡 Answer: ${ans}`;
+      messages.push(text);
     });
   });
 
@@ -676,9 +702,9 @@ async function startSending() {
   for (const msg of messages) {
     if (stopFlag) { logEntry("⛔ Stopped.", "err"); break; }
     try {
-      await sendMessage(token, chatId, msg.text);
+      await sendMessage(msg);
       sent++;
-      logEntry(`✅ ${sent}/${total}: ${msg.text.substring(0, 55)}...`, "ok");
+      logEntry(`✅ ${sent}/${total}: ${msg.substring(0, 55)}...`, "ok");
     } catch (e) {
       logEntry(`❌ Failed: ${e.message}`, "err");
     }
@@ -696,8 +722,236 @@ async function startSending() {
   document.getElementById("pauseBtn").className = "ctrl-btn pause";
   document.getElementById("stopBtn").classList.remove("visible");
   pauseFlag = false;
+}
 
-  if (!stopFlag && tg) tg.showPopup({ message: `✅ All ${sent} questions sent!`, buttons: [{ type: "ok" }] });
+// ---- DOWNLOAD BOT.JS ----
+function downloadBotScript() {
+  const script = generateBotScript();
+  const blob = new Blob([script], { type: "text/javascript" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "bot.js";
+  a.click();
+}
+
+function generateBotScript() {
+  const topicsJson = JSON.stringify(TOPICS, null, 2);
+  const allowedJson = JSON.stringify([OWNER_ID, ...allowedUsers.map(u => u.id)]);
+  return `// ============================================================
+// Telegram Question Bot — polling script
+// Run with: node bot.js
+// Requires: npm install node-fetch
+// ============================================================
+const BOT_TOKEN  = "${BOT_TOKEN}";
+const OWNER_ID   = "${OWNER_ID}";
+let ALLOWED_USERS = ${allowedJson};
+
+let TOPICS = ${topicsJson};
+
+const fetch = (...args) => import('node-fetch').then(({default: f}) => f(...args));
+
+function isAllowed(userId) {
+  return ALLOWED_USERS.includes(String(userId));
+}
+
+async function sendMsg(chatId, text) {
+  await fetch(\`https://api.telegram.org/bot\${BOT_TOKEN}/sendMessage\`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ chat_id: chatId, text })
+  });
+}
+
+function findTopic(keyword) {
+  const k = keyword.toLowerCase();
+  return TOPICS.find(t => t.id.toLowerCase() === k || t.label.toLowerCase().includes(k));
+}
+
+async function handleCommand(msg) {
+  const chatId = msg.chat.id;
+  const userId = String(msg.from.id);
+  const text = (msg.text || "").trim();
+
+  if (!isAllowed(userId)) {
+    await sendMsg(chatId, "⛔ You are not authorised to use this bot.");
+    return;
+  }
+
+  const [cmd, ...args] = text.split(" ");
+
+  if (cmd === "/help" || cmd === \`/help@\${BOT_USERNAME}\`) {
+    await sendMsg(chatId,
+      "📋 Commands:\\n" +
+      "/topics — list all topics\\n" +
+      "/list <topic> — list questions\\n" +
+      "/send <topic> — send all questions in topic\\n" +
+      "/sendq <topic> <number> — send one question\\n" +
+      "/sendall — send everything\\n" +
+      "/answer <topic> <number> — send answer to group\\n" +
+      "/answerprivate <topic> <number> — send answer privately to you\\n" +
+      "/addtopic <name> — create new topic\\n" +
+      "/addq <topic> | <question> | <answer> — add question\\n" +
+      "/delq <topic> <number> — delete question\\n" +
+      "/deltopic <topic> — delete topic\\n" +
+      "/allow <user_id> — allow user\\n" +
+      "/disallow <user_id> — remove user\\n" +
+      "/users — list allowed users"
+    );
+  }
+
+  else if (cmd === "/topics") {
+    const list = TOPICS.map((t,i) => \`\${i+1}. \${t.label} (\${t.questions.length} Qs)\`).join("\\n");
+    await sendMsg(chatId, "📚 Topics:\\n" + (list || "None yet."));
+  }
+
+  else if (cmd === "/list") {
+    const topic = findTopic(args[0] || "");
+    if (!topic) { await sendMsg(chatId, "Topic not found."); return; }
+    const list = topic.questions.map((q,i) => \`\${i+1}. \${q}\`).join("\\n");
+    await sendMsg(chatId, \`📋 \${topic.label}:\\n\${list}\`);
+  }
+
+  else if (cmd === "/send") {
+    const topic = findTopic(args[0] || "");
+    if (!topic) { await sendMsg(chatId, "Topic not found. Use /topics to see available topics."); return; }
+    await sendMsg(chatId, \`📌 \${topic.label}\`);
+    for (let i = 0; i < topic.questions.length; i++) {
+      await sendMsg(chatId, \`Q\${i+1}. \${topic.questions[i]}\`);
+      await new Promise(r => setTimeout(r, 1200));
+    }
+  }
+
+  else if (cmd === "/sendall") {
+    for (const topic of TOPICS) {
+      await sendMsg(chatId, \`📌 \${topic.label}\`);
+      for (let i = 0; i < topic.questions.length; i++) {
+        await sendMsg(chatId, \`Q\${i+1}. \${topic.questions[i]}\`);
+        await new Promise(r => setTimeout(r, 1200));
+      }
+    }
+  }
+
+  else if (cmd === "/sendq") {
+    const topic = findTopic(args[0] || "");
+    const num = parseInt(args[1]) - 1;
+    if (!topic) { await sendMsg(chatId, "Topic not found."); return; }
+    if (isNaN(num) || num < 0 || num >= topic.questions.length) {
+      await sendMsg(chatId, \`Invalid question number. Topic has \${topic.questions.length} questions.\`);
+      return;
+    }
+    await sendMsg(chatId, \`Q\${num+1}. \${topic.questions[num]}\`);
+  }
+
+  else if (cmd === "/answer") {
+    const topic = findTopic(args[0] || "");
+    const num = parseInt(args[1]) - 1;
+    if (!topic) { await sendMsg(chatId, "Topic not found."); return; }
+    if (isNaN(num) || num < 0 || num >= topic.questions.length) {
+      await sendMsg(chatId, "Invalid question number."); return;
+    }
+    const ans = topic.answers && topic.answers[num];
+    if (!ans) { await sendMsg(chatId, "No answer stored for that question."); return; }
+    await sendMsg(chatId, \`💡 Answer to Q\${num+1} (\${topic.label}):\\n\${ans}\`);
+  }
+
+  else if (cmd === "/answerprivate") {
+    const topic = findTopic(args[0] || "");
+    const num = parseInt(args[1]) - 1;
+    if (!topic) { await sendMsg(chatId, "Topic not found."); return; }
+    if (isNaN(num) || num < 0 || num >= topic.questions.length) {
+      await sendMsg(chatId, "Invalid question number."); return;
+    }
+    const ans = topic.answers && topic.answers[num];
+    if (!ans) { await sendMsg(chatId, "No answer stored for that question."); return; }
+    await fetch(\`https://api.telegram.org/bot\${BOT_TOKEN}/sendMessage\`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ chat_id: userId, text: \`💡 Answer to Q\${num+1} (\${topic.label}):\\n\${ans}\` })
+    });
+    await sendMsg(chatId, \`✅ Answer sent to you privately.\`);
+  }
+
+  else if (cmd === "/addtopic") {
+    const name = args.join(" ").trim();
+    if (!name) { await sendMsg(chatId, "Usage: /addtopic <topic name>"); return; }
+    const id = "cmd_" + Date.now();
+    TOPICS.push({ id, label: name, questions: [], answers: [] });
+    await sendMsg(chatId, \`✅ Topic "\${name}" created. Add questions with /addq \${name} | <question> | <answer>\`);
+  }
+
+  else if (cmd === "/addq") {
+    const full = text.slice(cmd.length + 1);
+    const parts = full.split("|").map(p => p.trim());
+    if (parts.length < 2) { await sendMsg(chatId, "Usage: /addq <topic> | <question> | <answer (optional)>"); return; }
+    const topic = findTopic(parts[0]);
+    if (!topic) { await sendMsg(chatId, "Topic not found."); return; }
+    if (!topic.answers) topic.answers = [];
+    topic.questions.push(parts[1]);
+    topic.answers.push(parts[2] || "");
+    await sendMsg(chatId, \`✅ Added Q\${topic.questions.length}: \${parts[1]}\`);
+  }
+
+  else if (cmd === "/delq") {
+    const topic = findTopic(args[0] || "");
+    const num = parseInt(args[1]) - 1;
+    if (!topic) { await sendMsg(chatId, "Topic not found."); return; }
+    if (isNaN(num) || num < 0 || num >= topic.questions.length) {
+      await sendMsg(chatId, "Invalid question number."); return;
+    }
+    const removed = topic.questions.splice(num, 1)[0];
+    if (topic.answers) topic.answers.splice(num, 1);
+    await sendMsg(chatId, \`🗑️ Deleted: \${removed}\`);
+  }
+
+  else if (cmd === "/deltopic") {
+    const topic = findTopic(args.join(" "));
+    if (!topic) { await sendMsg(chatId, "Topic not found."); return; }
+    TOPICS = TOPICS.filter(t => t.id !== topic.id);
+    await sendMsg(chatId, \`🗑️ Deleted topic: \${topic.label}\`);
+  }
+
+  else if (cmd === "/allow") {
+    if (userId !== OWNER_ID) { await sendMsg(chatId, "Only the owner can allow users."); return; }
+    const newId = args[0];
+    if (!newId) { await sendMsg(chatId, "Usage: /allow <user_id>"); return; }
+    if (ALLOWED_USERS.includes(newId)) { await sendMsg(chatId, "User already allowed."); return; }
+    ALLOWED_USERS.push(newId);
+    await sendMsg(chatId, \`✅ User \${newId} is now allowed.\`);
+  }
+
+  else if (cmd === "/disallow") {
+    if (userId !== OWNER_ID) { await sendMsg(chatId, "Only the owner can remove users."); return; }
+    const rmId = args[0];
+    ALLOWED_USERS = ALLOWED_USERS.filter(u => u !== rmId);
+    await sendMsg(chatId, \`✅ User \${rmId} removed.\`);
+  }
+
+  else if (cmd === "/users") {
+    await sendMsg(chatId, "👥 Allowed users:\\n" + ALLOWED_USERS.join("\\n"));
+  }
+}
+
+// ---- POLLING ----
+let offset = 0;
+async function poll() {
+  try {
+    const res = await fetch(\`https://api.telegram.org/bot\${BOT_TOKEN}/getUpdates?offset=\${offset}&timeout=30\`);
+    const data = await res.json();
+    if (data.result) {
+      for (const update of data.result) {
+        offset = update.update_id + 1;
+        if (update.message && update.message.text && update.message.text.startsWith("/")) {
+          await handleCommand(update.message);
+        }
+      }
+    }
+  } catch (e) { console.error("Poll error:", e.message); }
+  setTimeout(poll, 1000);
+}
+
+console.log("🤖 Bot started. Listening for commands...");
+poll();
+`;
 }
 
 renderTopics();
